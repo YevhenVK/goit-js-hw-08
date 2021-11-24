@@ -584,7 +584,7 @@ function onGetLocationPlayback() {
 }
 
 player.on('timeupdate', (0, _lodash.default)(onGetLocationPlayback, 1000));
-const localTime = localStorage.getItem(localStorageKey);
+const localTime = localStorage.getItem(storageKey);
 player.setCurrentTime(localTime).catch(function (error) {});
 },{"lodash.throttle":"../node_modules/lodash.throttle/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

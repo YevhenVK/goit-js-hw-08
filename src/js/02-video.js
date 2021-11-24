@@ -27,8 +27,7 @@ function onGetLocationPlayback() {
     player
         .on('timeupdate', throttle(onGetLocationPlayback, 1000));
 
-const localTime = localStorage.getItem(localStorageKey);
-
+const localTime = localStorage.getItem(storageKey);
     player
         .setCurrentTime(localTime)
         .catch(function (error) {
