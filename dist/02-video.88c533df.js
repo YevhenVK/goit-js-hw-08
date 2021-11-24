@@ -568,12 +568,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
-const storageKey = 'videoplayer-current-time'; // player.on('play', function() {
-//     console.log('played the video!');
-// });
-// player.getVideoTitle().then(function(title) {
-//     console.log('title:', title);
-// });
+const storageKey = 'videoplayer-current-time';
 
 function onGetLocationPlayback() {
   player.getCurrentTime().then(function (seconds) {

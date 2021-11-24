@@ -4,13 +4,6 @@ const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
 const storageKey = 'videoplayer-current-time';
 
-// player.on('play', function() {
-//     console.log('played the video!');
-// });
-
-// player.getVideoTitle().then(function(title) {
-//     console.log('title:', title);
-// });
 
 function onGetLocationPlayback() {
     player
