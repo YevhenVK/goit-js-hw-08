@@ -15,7 +15,7 @@ function onGetLocationPlayback() {
         .catch(function (error) {
         // an error occurred
         });
-}
+};
 
     player
         .on('timeupdate', throttle(onGetLocationPlayback, 1000));
