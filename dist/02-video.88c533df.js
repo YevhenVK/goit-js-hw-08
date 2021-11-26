@@ -568,19 +568,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
-const storageKey = 'videoplayer-current-time';
+const LOCALSTORAGE_KEY = 'videoplayer-current-time';
 
 function onGetLocationPlayback() {
   player.getCurrentTime().then(function (seconds) {
     // seconds = the current playback position
-    localStorage.setItem(storageKey, seconds);
+    localStorage.setItem(LOCALSTORAGE_KEY, seconds);
   }).catch(function (error) {// an error occurred
   });
 }
 
 ;
 player.on('timeupdate', (0, _lodash.default)(onGetLocationPlayback, 1000));
-const localTime = localStorage.getItem(storageKey);
+const localTime = localStorage.getItem(LOCALSTORAGE_KEY);
 player.setCurrentTime(localTime).catch(function (error) {});
 },{"lodash.throttle":"../node_modules/lodash.throttle/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
